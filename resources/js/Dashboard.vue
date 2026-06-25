@@ -33,8 +33,6 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   data() {
     return {
@@ -45,7 +43,7 @@ export default {
   },
 
   async mounted() {
-    const res = await axios.get("/api/dashboard");
+    const res = await axios.get("/dashboard");
 
     this.summary = res.data.summary;
     this.payments = res.data.payments;
